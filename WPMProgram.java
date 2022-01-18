@@ -59,9 +59,6 @@ public class WPMProgram {
 
 
 
-
-
-
             System.out.println();
             // Java.Util.LocalTime to get the nano seconds of the day we are currently in
             double start = LocalTime.now().toNanoOfDay();
@@ -80,7 +77,7 @@ public class WPMProgram {
             // (x characters| / 5) / 1min = y WPM
             int wpm = (int) (((double) numChars / 5) / seconds * 60);
 
-            System.out.println(usersName.toUpperCase() +", you typed " + numChars + " characters in " + seconds + " seconds.");
+            System.out.println(usersName.substring(0, 1).toUpperCase() + usersName.substring(1) +", you typed " + numChars + " characters in " + seconds + " seconds.");
 
 
 
@@ -109,6 +106,7 @@ public class WPMProgram {
             int number8 = 0;
             int number9 = 0;
             int number10 = 0;
+
 
             // Compare userTypedWordsSplit[0] to words[rand1] and if correct, add 1 to correctWords
             if (userTypedWordsSplit[0].equals(words[rand1])) {
@@ -334,45 +332,6 @@ public class WPMProgram {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             System.out.println("You typed " + wpm + " words per minute.");
 
             // Ask user if they want to play again
@@ -391,7 +350,7 @@ public class WPMProgram {
             }
             // If the answer is no, exit the program
             else {
-                System.out.println("Thanks for playing!");
+                System.out.println("Thanks for playing " + usersName + "!");
                 playAgain = false;
             }
 
@@ -400,37 +359,27 @@ public class WPMProgram {
         }
 
     public static void randomWords() {
-        // Create a random number generator
+
         Random rand = new Random();
 
-        // Create a random number generator
         Random rand1 = new Random();
 
-        // Create a random number generator
         Random rand2 = new Random();
 
-        // Create a random number generator
         Random rand3 = new Random();
 
-        // Create a random number generator
         Random rand4 = new Random();
 
-        // Create a random number generator
         Random rand5 = new Random();
 
-        // Create a random number generator
         Random rand6 = new Random();
 
-        // Create a random number generator
         Random rand7 = new Random();
 
-        // Create a random number generator
         Random rand8 = new Random();
 
-        // Create a random number generator
         Random rand9 = new Random();
 
-        // Create a random number generator
         Random rand10 = new Random
                 ();
 
