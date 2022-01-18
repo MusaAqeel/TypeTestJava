@@ -6,14 +6,37 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class WPMProgram {
-    static String[] words = {"hello", "world", "java", "programming", "is", "fun", "computer", "online", "type", "code"};
+    static String FirstWord = "Hello";
+    static String SeccondWord = "Hello";
+    static String ThirdWord = "Hello";
+    static String FourthWord = "Hello";
+    static String FifthWord = "Hello";
+    static String SixthWord = "Hello";
+    static String SeventhWord = "Hello";
+    static String EightWord = "Hello";
+    static String NinthWord = "Hello";
+    static String TenthWord = "Hello";
+
+
+
+
+    static String[] words = {FirstWord, SeccondWord, ThirdWord, FourthWord, FifthWord, SixthWord, SeventhWord, EightWord, NinthWord, TenthWord,};
+
+
+
+
+
+
+
 
     public static void main(String[] args) throws InterruptedException {
+
 
         System.out.println("Welcome to the WPM program!");
         System.out.println("Please enter your name: ");
         Scanner scanner = new Scanner(System.in);
         String usersName = scanner.nextLine();
+
 
 
 
@@ -81,11 +104,12 @@ public class WPMProgram {
 
 
 
-            // Split users input into an array of words
+             // Split users input into an array of words
             String [] userTypedWordsSplit = userTypedWords.split(" "); //all parts stored in an array
 
-            //System.out.println(userTypedWordsSplit[0]);
-            //System.out.println(userTypedWordsSplit[1]);
+            // Code bellow splits the strings into individual words
+            System.out.println(userTypedWordsSplit[0]);
+            System.out.println(userTypedWordsSplit[1]);
             //System.out.println(userTypedWordsSplit[2]);
             //System.out.println(userTypedWordsSplit[3]);
             //System.out.println(userTypedWordsSplit[4]);
@@ -316,7 +340,7 @@ public class WPMProgram {
 
             // if the length is 11
             if (numChars0 == 11) {
-                System.out.println(userTypedWordsSplit0[0]);
+                    System.out.println(userTypedWordsSplit0[0]);
                 System.out.println(userTypedWordsSplit0[1]);
                 System.out.println(userTypedWordsSplit0[2]);
                 System.out.println(userTypedWordsSplit0[3]);
@@ -339,7 +363,7 @@ public class WPMProgram {
             String answer = scan.nextLine();
 
            // Ask user if they want to play again and keep on asking until they give a valid answer
-            while (!answer.equals("yes") && !answer.equals("no")) {
+            while (!answer.equals("yes")  && !answer.equals("no")) {
                 System.out.println("Please enter yes or no");
                 answer = scan.nextLine();
             }
@@ -356,10 +380,14 @@ public class WPMProgram {
 
         }
 
+
+
         }
 
-    public static void randomWords() {
 
+
+    public static void randomWords() {
+        //  rand is unnecessary, but I'm leaving it in for now
         Random rand = new Random();
 
         Random rand1 = new Random();
@@ -380,8 +408,7 @@ public class WPMProgram {
 
         Random rand9 = new Random();
 
-        Random rand10 = new Random
-                ();
+        Random rand10 = new Random();
 
 
     }
