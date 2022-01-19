@@ -118,7 +118,7 @@ public class WPMProgram {
             public static final String WHITE_BACKGROUND_BRIGHT = "\033[0;107m";   // WHITE
         }
 
-        // create method that
+
 
 
         System.out.println("Welcome to the WPM program!");
@@ -192,7 +192,7 @@ public class WPMProgram {
             int numChars = userTypedWords.length();
             // (x characters| / 5) / 1min = y WPM
             int wpm = (int) (((double) numChars / 5) / seconds * 60);
-            
+
 
 
 
@@ -214,6 +214,13 @@ public class WPMProgram {
             System.out.println(usersName.substring(0, 1).toUpperCase() + usersName.substring(1) + ", you typed " + numChars + " characters or " +numWords+ " words in " + seconds + " seconds.");
 
             System.out.println("You typed at a speed of " + wpm + " words per minute.");
+
+
+            // Create a method that prints the user all the words that he got wrong and the words that he got right
+            // All the words got right will be in green and all the words got wrong will be in red
+            colourizedMethod();
+
+
 
 
 
@@ -247,6 +254,12 @@ public class WPMProgram {
 
 
 
+
+    }
+
+    public static void colourizedMethod() {
+        // method that prints the user all the words that he got wrong and the words that he got right
+        // All the words got right will be in green and all the words got wrong will be in red
 
     }
 
