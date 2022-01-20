@@ -196,29 +196,91 @@ public class WPMProgram {
 
 
 
-            //Create public method that checks how many words the user inputted and if it is more than 10, it will ignore the extra words
+            //Bellow code checks how many words the user inputted and if it is more than 10, it will ignore the extra words to prevent the program from crashing
             // and only count the first 10 words
             int numWords = 0;
             for (int i = 0; i < userTypedWords.length(); i++) {
                 if (userTypedWords.charAt(i) == ' ') {
                     numWords++; // Count the number of words
+
+
                 }
 
             }
-          
-            double percentage = (double) numWords / 10 * 100;
+
+
+
+            // Prevents extra words from being calculated and counted in the WPM calculation by only counting the first 10 words in the user input string
+            String[] wordsArray = userTypedWords.split(" ");
+            String[] wordsArray2 = new String[10];
+            for (int i = 0; i < 10; i++) {
+                wordsArray2[i] = wordsArray[i];
+
+            }
+            String wordsArray3 = String.join(" ", wordsArray2);
+            // Print out the number of words the user typed
+            System.out.println("\nYou typed " + numWords + " words");
+
+            // create code that prevents extra words from being calculated and counted in the numChars calculation by only counting the first 10 words in the user input string
+            String[] wordsArray4 = userTypedWords.split(" ");
+            String[] wordsArray5 = new String[10];
+            for (int i = 0; i < 10; i++) {
+                wordsArray5[i] = wordsArray4[i];
+
+            }
+            String numCharsWithoutExtra = String.join(" ", wordsArray5);
+
+
+            // Calculate percentage of words typed correctly without accounting for the extra words the user typed
+            int numCorrectWords = 0;
+            for (int i = 0; i < wordsArray5.length; i++) {
+                if (wordsArray5[i].equals(words[i])) {
+                    numCorrectWords++;
+
+                }
+
+            }
+            double percentCorrect = ((double) numCorrectWords / 10) * 100;
+
+
 
             // Print statements to display the number of words typed, the number of words per minute, and the percentage of words typed to the user.
-            System.out.println("You typed " + percentage + "% of the words correctly.");
+            System.out.println("You typed " + percentCorrect + "% of the words correctly.");
 
-            System.out.println(usersName.substring(0, 1).toUpperCase() + usersName.substring(1) + ", you typed " + numChars + " characters or " +numWords+ " words in " + seconds + " seconds.");
-
+            System.out.println(usersName.substring(0, 1).toUpperCase() + usersName.substring(1) + ", you typed " + numChars + " characters of which " + numCharsWithoutExtra.length() + " characters were valid");
+            System.out.println("You typed " + numWords+ " words in " + seconds + " seconds.");
             System.out.println("You typed at a speed of " + wpm + " words per minute.");
+
+
+
+
+
+
+
+
+
+
 
 
             // Create a method that prints the user all the words that he got wrong and the words that he got right
             // All the words got right will be in green and all the words got wrong will be in red
             colourizedMethod();
+
+            //make another method
+
+            // Create for loop that deletes any user inputted strings that are beyond the 10th word
+            for (int i = 0; i < userTypedWords.length(); i++) {
+                if (userTypedWords.charAt(i) == ' ') {
+                    if (i > 10) {
+                        userTypedWords = userTypedWords.substring(0, i);
+
+                    }
+
+                }
+
+
+            }
+
 
 
 
@@ -256,6 +318,8 @@ public class WPMProgram {
 
 
     }
+
+
 
     public static void colourizedMethod() {
         // method that prints the user all the words that he got wrong and the words that he got right
@@ -298,7 +362,7 @@ public class WPMProgram {
 
 
     }
-    // Method heckWords  checks the users input against the randomly generated words and returns true if the users input is equal to the randomly generated words and false if the users input is not equal to the randomly generated words
+    // Method checkWords checks the users input against the randomly generated words and returns true if the users input is equal to the randomly generated words and false if the users input is not equal to the randomly generated words
     public static boolean checkWords(String[] splitWords, String[] words) {
         boolean correct = true;
         for (int i = 0; i < splitWords.length; i++) {
