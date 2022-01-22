@@ -1,3 +1,10 @@
+// Java Typing Test
+// January 20th 2022
+// ICS3U
+// Musa Aqeel
+// Ella Katsman
+
+
 import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.Random;
@@ -120,7 +127,7 @@ class TypeTestICS3U {
         }
 
 
-        System.out.println(ConsoleColors.BLACK_BACKGROUND_BRIGHT + "Welcome to the final WPM program!" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.BLACK_BACKGROUND_BRIGHT + "Welcome to Java Type Test!" + ConsoleColors.RESET);
         System.out.println(" ");
         System.out.print(ConsoleColors.WHITE_BOLD + "Whats your name? " + ConsoleColors.RESET);
         Scanner scanner = new Scanner(System.in);
@@ -247,25 +254,16 @@ class TypeTestICS3U {
             //userTyped words is a string
 
 
-
-
-
-
-
-
-
-
             // Split userTypedWords into an array called userSplitWords
             // userSplitWords contains the words the user typed in splitting them up by spaces
             //print userSplitWords[0]
-
 
             String[] userSplitWords = userTypedWords.split(" ");
 
 
 
 
-            // Use for loop to go through each array element in userSplitWords and add 1 point to score everytime the word matches to the word in the array
+            // For loop to go through each array element in userSplitWords and add 1 point to score everytime the word matches to the word in the array
             for (int ii = 0; ii < userSplitWords.length; ii++) {
                 if (userSplitWords[ii].equals(words[rand1]) || userSplitWords[ii].equals(words[rand2]) || userSplitWords[ii].equals(words[rand3]) || userSplitWords[ii].equals(words[rand4]) || userSplitWords[ii].equals(words[rand5]) || userSplitWords[ii].equals(words[rand6]) || userSplitWords[ii].equals(words[rand7]) || userSplitWords[ii].equals(words[rand8]) || userSplitWords[ii].equals(words[rand9]) || userSplitWords[ii].equals(words[rand10])) {
 
@@ -276,7 +274,7 @@ class TypeTestICS3U {
             }
 
 
-            // (userSplitWords[0]) up to (userSplitWords[9]) are the words the user typed in the game and they are stored in the array userSplitWords and the words are the individual words
+            // (userSplitWords[0]) up to (userSplitWords[9]) are the words the user typed in the game, and they are stored in the array userSplitWords and the words are the individual words
 
             String[] userSplitWordsChar1 = userSplitWords[0].split("");
             String[] userSplitWordsChar2 = userSplitWords[1].split("");
@@ -484,7 +482,7 @@ class TypeTestICS3U {
 
             //Calculate percentage
             int percentage = (CorrectChars * 100) / totalChars;
-            // print out percentage in bold
+
             System.out.println("");
 
             System.out.println("You were: "+ConsoleColors.WHITE_BOLD + percentage + "%" + ConsoleColors.RESET + " accurate");
